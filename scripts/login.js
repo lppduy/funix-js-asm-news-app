@@ -14,8 +14,18 @@ function loginHandler(e) {
   const storedUsers = getFromStorage(KEY, []);
 
   // Validate username và password
-  if (!username || !password) {
+  if (!username && !password) {
     alert('Please enter username and password');
+    return;
+  }
+
+  if (!username) {
+    alert('Please enter username');
+    return;
+  }
+
+  if (!password) {
+    alert('Please enter password');
     return;
   }
 

@@ -23,6 +23,10 @@ submitButton.addEventListener('click', function () {
   const newCategory = categoryInput.value;
   const newPageSize = parseInt(pageSizeInput.value);
 
+  if (!newPageSize) {
+    alert('Please set the news per page');
+  } // khi không nhập page size sẽ báo lỗi
+
   // Lưu trữ settings cho user vào currentUser và cả thông tin của user đó trên USER_ARRAY
   // => Khi thoát tài khoản ra thì user đó vẫn còn lưu setting cũ
 
